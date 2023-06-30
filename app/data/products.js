@@ -181,7 +181,7 @@ A timeless rubber sole combines with a soft sockliner and encapsulated Nike Air 
     images: [
       "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/nike/nike9.png",
     ],
-    name: "Nike Dunk",
+    name: "Nike Air Jordan 1",
     price: 119,
     sizes: [40, 41, 42, 43, 44],
     description: `Inspired by the original that debuted in 1985, the Air Jordan 1 Low delivers a clean, classic look that's familiar yet fresh. With an iconic design that blends seamlessly with any fit, these shoes are perfect for taking charge.
