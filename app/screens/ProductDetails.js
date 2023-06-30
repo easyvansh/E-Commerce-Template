@@ -18,7 +18,7 @@ const ProductDetails = () =>{
         console.log(product);
     }
     return(
-        <View>
+        <View >
           <ScrollView>
             {/* Image Carousel */}
             <FlatList
@@ -54,6 +54,7 @@ const ProductDetails = () =>{
   
 
 const styles = StyleSheet.create({
+  
   title: {
     fontSize: 34,
     fontWeight: "500",
