@@ -8,11 +8,11 @@ import {
   ScrollView,
   Pressable,
 } from "react-native";
-import products from "../data/products";
+import { useSelector } from "react-redux";
 
 const { height, width } = Dimensions.get("window");
 const ProductDetails = () =>{
-    const product = products[0];
+    const product = useSelector((state) => state.products.selectedProduct)
     const addToCart = () =>{
         
         console.log(product);
@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     lineHeight: 30,
     fontWeight: "300",
+    paddingBottom:80,
   },
   button:{
     position:'absolute',
@@ -79,7 +80,8 @@ const styles = StyleSheet.create({
     alignSelf:'center',
     padding:20,
     borderRadius:100,
-    alignItems:'center'
+    alignItems:'center',
+    elevation:5,
   },
   buttonText:{
     color:'white',
