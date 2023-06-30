@@ -1,17 +1,19 @@
 import React from 'react'
-import { StyleSheet, Text, View ,Image,FlatList,Dimensions} from 'react-native'
+import { StyleSheet, Text, View ,Image,FlatList,Dimensions,Pressable} from 'react-native'
 import products from '../data/products'
+import { useNavigation } from '@react-navigation/native';
 
 const {height, width} = Dimensions.get("window");
 
 const HomePage = () => {
+  const navigation = useNavigation()
   return (
       <FlatList
       data = {products}
       renderItem = {({item}) =>  (
-        <View style={styles.itemContainer}>
+        <Pressable onPress = {() => navigation.navigate('Product Details')} style={styles.itemContainer}>
       <Image source={{ uri: item.image}} style={styles.image} /> 
-      </View>
+      </Pressable>
       )}
       keyExtractor = {item => item.id}
       numColumns={2}
